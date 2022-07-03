@@ -1,6 +1,6 @@
 body{
 /*     background-color: #9DD6DF; */
-    margin: 0;
+    padding: 0, 30px ;
 }
 .container{
     height: 100vh;
