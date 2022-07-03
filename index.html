@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charles1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+   <div class="container">
+    <div class="navbar">
+        <img src="images/logo1.png" alt="CHARLIECOOL logo" class="logo charlie">
+    <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="lyrics.html">ABOUT</a></li>
+        <li><a href="lyrics.html">SPECIFICATIONS</a></li>
+        <li><a href="lyrics.html">PRODUCTS</a></li>
+        <li><a href="lyrics.html">LYRICS</a></li>
+    </ul>
+    </div>
+    <div class="content">
+        <div class="left-col">
+            <h1>CHARLIECOOL<br> MUSIC</h1>
+        </div>
+        <div class="right-col">
+            <p>Click here to listen</p>
+            <img src="images/play.png" alt="pause icon" id="icon">
+        </div>
+    </div>
+   </div>
+   <audio src="music/Jaymes_Young_-_Happiest_Year.mp3" id="mySong">
+    
+   </audio>
+
+   
+
+<script>
+    var mySong = document.getElementById("mySong");
+    var icon = document.getElementById("icon");
+
+    icon.onclick = function(){
+        
+        if (mySong.paused){
+            mySong.play();
+            icon.src="images/pause.png";
+        }else{
+            mySong.pause();
+            icon.src="images/play.png";
+        }
+        document.addEventListener("keypress", function(event){
+        makesound(event.key)})
+
+        function makesound (event){
+            switch (key) {
+                case "space":
+                    mySong.play();
+                    break;
+            
+                default:
+                    break;
+            }
+        }
+    }
+</script>
+</body>
+</html>
